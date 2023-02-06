@@ -1,0 +1,60 @@
+require: rubocop-rails
+
+Style/Documentation:
+  Exclude:
+    - 'test/test_helper.rb'
+    - 'test/application_system_test_case.rb'
+    - 'app/helpers/application_helper.rb'
+    - 'app/mailers/application_mailer.rb'
+    - 'config/application.rb'
+    - 'app/models/application_record.rb'
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+    - 'config/environments/production.rb'
+
+Rails/FilePath:
+  Exclude:
+    - 'config/environments/development.rb'
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/channels/application_cable/connection_test.rb'
+    - 'test/test_helper.rb'
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'test/test_helper.rb'
+    - 'test/channels/application_cable/connection_test.rb'
+    - 'test/application_system_test_case.rb'
+    - 'db/seeds.rb'
+    - 'config/**/*'
+    - 'config.ru'
+    - 'app/models/application_record.rb'
+    - 'app/mailers/application_mailer.rb'
+    - 'app/jobs/application_job.rb'
+    - 'app/helpers/application_helper.rb'
+    - 'app/controllers/application_controller.rb'
+    - 'app/channels/application_cable/connection.rb'
+    - 'app/channels/application_cable/channel.rb'
+    - 'Rakefile'
+    - 'Gemfile'
+
+Style/GlobalStdStream:
+  Exclude:
+    - 'config/environments/production.rb'
+
+Style/RedundantFetchBlock:
+  Exclude:
+    - 'config/puma.rb'
+
+Style/StringLiterals:
+  Exclude:
+    - 'config/environments/production.rb'
+    - 'config/puma.rb'
+    - 'config/spring.rb'
+    - 'test/application_system_test_case.rb'
+    - 'test/channels/application_cable/connection_test.rb'
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
