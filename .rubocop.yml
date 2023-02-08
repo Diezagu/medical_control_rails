@@ -32,6 +32,7 @@ Style/FrozenStringLiteralComment:
     - 'app/channels/**/*'
     - 'Rakefile'
     - 'Gemfile'
+    - 'db/migrate/**/*'
 
 Style/GlobalStdStream:
   Exclude:
@@ -61,3 +62,7 @@ Metrics/BlockLength:
 Metrics/MethodLength:
   Exclude:
   - 'db/migrate/20230207061532_create_patients.rb'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'db/migrate/20230207061532_create_patients.rb'

@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_07_061532) do
     t.integer "gender", null: false
     t.integer "marital_status"
     t.string "reference"
+    t.string "occupations"
     t.text "primary_dx"
     t.text "initial_dx"
     t.text "final_dx"
