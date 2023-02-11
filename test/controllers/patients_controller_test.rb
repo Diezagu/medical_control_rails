@@ -14,11 +14,11 @@ class PatientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should create a patients' do
-    date = Time.current.strftime("%d/%m/%Y %H:%M")
+    registered_at = Time.current.strftime("%d/%m/%Y %H:%M")
 
     post patients_path(params: { patient: { name: 'Diego',
                                             age: 24,
-                                            registered_at: date,
+                                            registered_at:,
                                             gender: 'masculino' } })
 
     assert_redirected_to patients_path
@@ -38,11 +38,11 @@ class PatientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update a patient information ' do
-    date = Time.current.strftime("%d/%m/%Y %H:%M")
+    registered_at = Time.current.strftime("%d/%m/%Y %H:%M")
 
     patch patient_path(@patient, params: { patient: { name: 'Diego',
                                                       age: 24,
-                                                      date_of_entry: date,
+                                                      registered_at:,
                                                       gender: 'masculino' } })
 
     assert_redirected_to patients_path

@@ -36,12 +36,9 @@ class PatientsController < ApplicationController
     @patient = Patient.new
   end
 
-  def edit
-    @patient = Patient.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @patient = Patient.find(params[:id])
     if @patient.update(permitted_params)
       flash[:notice] = 'Patient updated successfully'
       redirect_to patients_path
