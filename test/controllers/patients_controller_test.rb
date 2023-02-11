@@ -18,7 +18,7 @@ class PatientsControllerTest < ActionDispatch::IntegrationTest
 
     post patients_path(params: { patient: { name: 'Diego',
                                             age: 24,
-                                            date_of_entry: date,
+                                            registered_at: date,
                                             gender: 'masculino' } })
 
     assert_redirected_to patients_path

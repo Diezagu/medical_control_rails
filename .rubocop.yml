@@ -57,12 +57,12 @@ Style/SymbolArray:
 
 Metrics/BlockLength:
   Exclude:
-    - 'db/migrate/20230207061532_create_patients.rb'
+    - 'db/migrate/**/*'
 
 Metrics/MethodLength:
   Exclude:
-  - 'db/migrate/20230207061532_create_patients.rb'
+  - 'db/migrate/**/*'
 
 Metrics/AbcSize:
   Exclude:
-    - 'db/migrate/20230207061532_create_patients.rb'
+    - 'db/migrate/**/*'

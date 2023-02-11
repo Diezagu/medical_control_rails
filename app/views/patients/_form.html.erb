@@ -14,8 +14,8 @@
   <%= f.label :medical_record, 'Expediente:' %>
   <%= f.text_field :medical_record %>
 
-  <%= f.label :date_of_entry, 'F. de Ingreso:' %>
-  <%= f.date_field :date_of_entry, required: true %>
+  <%= f.label :registered_at, 'F. de Ingreso:' %>
+  <%= f.date_field :registered_at, required: true %>
 
   <%= f.label :occupations, 'Ocupaciones:' %>
   <%= f.text_field :occupations, placeholder: 'Deporte, Danza, Lectura...' %>
@@ -24,11 +24,10 @@
   <%= f.text_field :address, placeholder: 'Av. Ejemplo #111' %>
 
   <%= f.label :gender, 'Sexo:' %>
-  <%= f.select :gender, options_for_select(Patient.genders.map { |k, _v| [ k.titleize, k ] })%>
+  <%= f.select :gender, options_for_select(gender_select_options)%>
 
   <%= f.label :marital_status, 'Estado Civil:' %>
-  <%= f.select :marital_status, options_for_select(
-                                Patient.marital_statuses.map { | k, _v | [ k.titleize, k ] }),
+  <%= f.select :marital_status, options_for_select(marital_status_select_options),
                                 {include_blank: 'N/A'} %>
 
   <%= f.label :reference, 'Referencia:' %>

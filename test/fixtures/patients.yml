@@ -6,7 +6,7 @@ first_patient:
     address: 123 Street AV.
     phone_number: 3121212222
     medical_record:
-    date_of_entry: <%= Time.now %>
+    registered_at: <%= Time.now %>
     gender: 0
     marital_status:
     reference:

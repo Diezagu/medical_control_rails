@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_07_061532) do
     t.string "address"
     t.string "phone_number"
     t.string "medical_record"
-    t.datetime "date_of_entry", null: false
+    t.datetime "registered_at", null: false
     t.integer "gender", null: false
     t.integer "marital_status"
     t.string "reference"

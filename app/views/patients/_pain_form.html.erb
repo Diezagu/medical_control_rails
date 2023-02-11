@@ -30,8 +30,7 @@
   <%= f.select :evaluation, options_for_select( (1..10).to_a ) %>
 
   <%= f.label :evara, 'EVARA:' %>
-  <%= f.select :evara, options_for_select(
-                                Patient.evaras.map { | k, _v | [ k.titleize, k ] })%>
+  <%= f.select :evara, options_for_select(evara_select_options)%>
 
   <%= f.label :previous_tx, 'TX. Previo:' %>
   <%= f.text_field :previous_tx %>

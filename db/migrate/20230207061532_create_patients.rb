@@ -8,7 +8,7 @@ class CreatePatients < ActiveRecord::Migration[7.0]
       t.string :address
       t.string :phone_number
       t.string :medical_record
-      t.datetime :date_of_entry, null: false
+      t.datetime :registered_at, null: false
       t.integer :gender, null: false
       t.integer :marital_status
       t.string :reference

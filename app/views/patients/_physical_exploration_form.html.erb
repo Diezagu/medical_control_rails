@@ -1,11 +1,9 @@
 <div>
   <%= f.label :blood_type, 'Gpo:' %>
-  <%= f.select :blood_type, options_for_select(
-                                Patient.blood_types.map { | k, _v | [ k.titleize, k ] })%>
+  <%= f.select :blood_type, options_for_select(blood_type_select_options)%>
 
   <%= f.label :rh_factor, 'Rh:' %>
-  <%= f.select :rh_factor, options_for_select(
-                                Patient.rh_factors.map { | k, _v | [ k.titleize, k ] })%>
+  <%= f.select :rh_factor, options_for_select(rh_factor_select_options)%>
 
   <%= f.label :weight, 'Peso(Kg):' %>
   <%= f.number_field :weight, placeholder: '60 Kg' %>
