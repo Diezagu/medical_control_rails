@@ -13,14 +13,14 @@ const setupTab = (tab, forms, tabs) => {
   tab.addEventListener('click', () => {
     setupTabFormat(tabs)
     tab.classList.remove('text-gray-600',
-                              'border-gray-600',
-                              'hover:text-gray-500',
-                              'hover:border-gray-500')
+                         'border-gray-600',
+                         'hover:text-gray-500',
+                         'hover:border-gray-500')
     tab.classList.add('text-blue-600',
-                            'border-blue-600',
-                            'hover:text-blue-500',
-                            'hover:border-blue-500')
-    const formId = tab.dataset['target']
+                      'border-blue-600',
+                      'hover:text-blue-500',
+                      'hover:border-blue-500')
+    const formId = tab.dataset.target
     forms.forEach((form) => displayForm(form))
     document.getElementById(formId).classList.toggle('hidden')
   })
