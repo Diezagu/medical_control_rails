@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Patient < ApplicationRecord
+  pg_search_scope :search_by_name, against: :name
   enum gender:  { masculino: 0, femenino: 1 }
   enum marital_status: { casado: 0, divorciado: 1, soltero: 2, union_libre: 3, viudo: 4 }
   enum evara: { leve: 0, moderado: 1, fuerte: 2, muy_fuerte: 3, insoportable: 4 }
