@@ -57,6 +57,11 @@ class PatientsController < ApplicationController
     redirect_to patients_path
   end
 
+  def search_patient
+    patients = Patient.whose_name_starts_with(params[:name])
+    render json: patients
+  end
+
   private
 
   def permitted_params
