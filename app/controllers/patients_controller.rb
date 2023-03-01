@@ -19,7 +19,7 @@ class PatientsController < ApplicationController
 
   def index
     @patients = Patient.all
-    filtered_patients = Patient.whose_name_starts_with(params[:text])
+    filtered_patients = Patient.whose_fullname_contains(params[:text])
     respond_to do |format|
       format.html
       format.json { render json: filtered_patients }

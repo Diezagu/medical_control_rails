@@ -2,7 +2,7 @@
 
 class Patient < ApplicationRecord
   include PgSearch::Model
-  pg_search_scope :whose_name_starts_with,
+  pg_search_scope :whose_fullname_contains,
                   against: :name,
                   using: {
                     tsearch: { prefix: true }
