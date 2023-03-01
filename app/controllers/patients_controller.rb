@@ -19,6 +19,11 @@ class PatientsController < ApplicationController
 
   def index
     @patients = Patient.all
+    filtered_patients = Patient.whose_name_starts_with(params[:text])
+    respond_to do |format|
+      format.html
+      format.json { render json: filtered_patients }
+    end
   end
 
   def create
@@ -55,11 +60,6 @@ class PatientsController < ApplicationController
       flash[:alert] = 'Error while deleting patient'
     end
     redirect_to patients_path
-  end
-
-  def search_patient
-    patients = Patient.whose_name_starts_with(params[:name])
-    render json: patients
   end
 
   private

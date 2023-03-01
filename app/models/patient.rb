@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Patient < ApplicationRecord
+  include PgSearch::Model
   pg_search_scope :whose_name_starts_with,
                   against: :name,
                   using: {
