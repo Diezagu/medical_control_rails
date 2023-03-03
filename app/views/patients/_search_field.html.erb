@@ -1,4 +1,4 @@
-<div class="pb-4 bg-white mt-4 dark:bg-gray-900 grid">
+<div data-component="search-field" class="pb-4 bg-white mt-4 dark:bg-gray-900 grid">
   <label for="table-search" class="sr-only">Search</label>
   <div class="relative mt-1">
     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -11,7 +11,7 @@
                 d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                 clip-rule="evenodd"></path></svg>
     </div>
-    <input type="text" data-component="search-field" class="block p-2 pl-10
+    <input data-search="search-input" type="text" class="block p-2 pl-10
                                                 w-3/12
                                                 text-sm
                                                 text-gray-900
@@ -28,7 +28,7 @@
                                                 dark:focus:border-blue-500"
                                         placeholder="Buscar paciente">
   </div>
-  <div id="search-container" class="hidden shadow-md shadow-black w-3/12">
+  <div data-target="search-container" class="hidden shadow-md shadow-black w-3/12">
     <ul id="patients-list">
     </ul>
   </div>

@@ -2,12 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/*
-@layer components {
-  .dropdown-search {
-    @apply flex hover:bg-violet-600;
-  }
-} */
-
-
