@@ -25,9 +25,8 @@ const showSearchResults = (searchText, searchField) => {
 }
 
 const fetchPatients = async (searchText) => {
-  const patients = await fetch(`/patients.json?text=${searchText}`)
-  const data = await patients.json();
-  return data
+  const response = await fetch(`/patients.json?text=${searchText}`)
+  return response.json();
 }
 
 const setupPatientsList = (patients) => {
