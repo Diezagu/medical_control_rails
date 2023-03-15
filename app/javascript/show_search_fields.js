@@ -16,10 +16,8 @@ const showSearchResults = (searchText, searchField) => {
     searchContainer.classList.remove('hidden')
     const patientsList = document.getElementById('patients-list');
     fetchPatients(searchText).then(patients => {
-      patients.json().then(patients => {
-          patientsList.innerHTML = ''
-          setupPatientsList(patients)
-      })
+      patientsList.innerHTML = ''
+      setupPatientsList(patients)
     })
   } else {
     searchContainer.classList.add('hidden')
@@ -28,6 +26,7 @@ const showSearchResults = (searchText, searchField) => {
 
 const fetchPatients = async (searchText) => {
   return fetch(`/patients.json?text=${searchText}`)
+         .then(response => response.json())
 }
 
 const setupPatientsList = (patients) => {
