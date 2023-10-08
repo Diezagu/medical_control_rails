@@ -4,6 +4,15 @@ document.addEventListener('turbo:load', () => {
 })
 
 const setupContainer = (searchField) => {
+  document.addEventListener('click', (e) => {
+    const clickOutside = !searchField.contains(e.target)
+    if(clickOutside) {
+      const searchContainer = searchField.querySelector('[data-target="search-container"]')
+      searchContainer.classList.add('hidden')
+    }
+  })
+
+
   searchField.addEventListener(['keyup'], () => {
     const searchText = searchField.querySelector('[data-search="search-input"]').value
     showSearchResults(searchText, searchField)
