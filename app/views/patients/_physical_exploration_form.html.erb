@@ -10,75 +10,75 @@
         <%= f.label :blood_type, 'Gpo:' %><br>
         <%= f.select :blood_type, options_for_select(blood_type_select_options),
                                   {},
-                                  { class: 'w-11/12' } %>
+                                  { class: 'w-11/12 rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' } %>
       </div>
       <div>
         <%= f.label :rh_factor, 'Rh:' %><br>
         <%= f.select :rh_factor, options_for_select(rh_factor_select_options),
                                  {},
-                                 { class: 'w-full'} %>
+                                 { class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500'} %>
       </div>
     </div>
 
     <div class="grid grid-cols-2 content-between w-full">
       <div class = "w-full">
         <%= f.label :weight, 'Peso(Kg):' %><br>
-        <%= f.number_field :weight, placeholder: '60 Kg', class: 'w-11/12' %>
+        <%= f.number_field :weight, placeholder: '60 Kg', class: 'w-11/12 rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
       </div>
 
       <div class = "w-full">
         <%= f.label :height, 'Talla(cm):' %><br>
-        <%= f.number_field :height, placeholder: '160cm', class: 'w-full' %>
+        <%= f.number_field :height, placeholder: '160cm', class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
       </div>
     </div>
 
     <div class = "w-full">
       <%= f.label :neck, 'Cuello:' %><br>
-      <%= f.text_field :neck, class: 'w-full' %>
+      <%= f.text_field :neck, class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
     </div>
 
     <div class = "w-full">
       <%= f.label :chest, 'Tórax:' %><br>
-      <%= f.text_field :chest, class: 'w-full' %>
+      <%= f.text_field :chest, class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
     </div>
 
     <div class = "w-full">
       <%= f.label :blood_pressure, 'TA:' %><br>
-      <%= f.number_field :blood_pressure, placeholder: '120 mmHg', class: 'w-full' %>
+      <%= f.number_field :blood_pressure, placeholder: '120 mmHg', class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
     </div>
 
     <div class = "w-full">
       <%= f.label :heart_rate, 'FC:' %><br>
-      <%= f.number_field :heart_rate, placeholder: 'lat/min', class: 'w-full' %>
+      <%= f.number_field :heart_rate, placeholder: 'lat/min', class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
     </div>
 
     <div class = "w-full">
       <%= f.label :breath_rate, 'FR:' %><br>
-      <%= f.number_field :breath_rate, placeholder: 'resp/min', class: 'w-full' %>
+      <%= f.number_field :breath_rate, placeholder: 'resp/min', class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
     </div>
 
     <div class = "w-full">
       <%= f.label :extremities, 'Extremidades:' %><br>
-      <%= f.text_field :extremities, class: 'w-full' %>
+      <%= f.text_field :extremities, class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
     </div>
 
     <div class = "w-full">
       <%= f.label :general_inspection, 'Insepcción general:' %><br>
-      <%= f.text_field :general_inspection, class: 'w-full' %>
+      <%= f.text_field :general_inspection, class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
     </div>
 
     <div class = "w-full">
       <%= f.label :head, 'Cabeza:' %><br>
-      <%= f.text_field :head, class: 'w-full' %>
+      <%= f.text_field :head, class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
     </div>
 
     <div class = "w-full">
       <%= f.label :abdomen, 'Abdomen:' %><br>
-      <%= f.text_field :abdomen, class: 'w-full' %>
+      <%= f.text_field :abdomen, class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
     </div>
 
     <div class = "w-full">
       <%= f.label :spine, 'Columna:' %><br>
-      <%= f.text_field :spine, class: 'w-full' %>
+      <%= f.text_field :spine, class: 'w-full rounded p-2 text-gray-900 border border-gray-300 focus:ring-blue-500 focus:border-blue-500' %>
     </div>
 </div>
