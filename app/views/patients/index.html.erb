@@ -19,7 +19,7 @@
             <tr class="border-b border-violet-200">
               <td class="p-1"> <%= p.name %> </td>
               <td class="p-1"> <%= p.age %> </td>
-              <td class="p-1"> <%= p.registered_at %> </td>
+              <td class="p-1"> <%= p.registered_at.strftime('%-d de %B del %Y') %> </td>
               <td class="p-1"> <%= p.gender.titleize %> </td>
               <td class="p-1"> <%= p.medical_background %> </td>
               <td class="flex items-center pt-1.5 gap-x-1.5">
