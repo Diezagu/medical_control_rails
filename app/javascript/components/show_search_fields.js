@@ -36,7 +36,7 @@ const setupPatientsList = (patients) => {
     const link = searchMatch.appendChild(document.createElement('a'))
     searchMatch.appendChild(document.createElement('hr'));
     link.href = `/patients/${patient.id}/edit`
-    link.classList.add('flex', 'hover:bg-violet-300', 'p-2')
+    link.classList.add('flex', 'hover:bg-blue-300', 'p-2')
     link.appendChild(document.createTextNode(patient.name));
     patientsList.appendChild(searchMatch);
   });
