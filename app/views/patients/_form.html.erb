@@ -1,5 +1,5 @@
 <%= form_with model: @patient, action: :post do |f| %>
-  <div class="grid grid-cols-3 block shadow-md rounded shadow-black bg-white p-4 gap-x-6">
+  <div class="grid grid-cols-3 block shadow rounded bg-white p-4 gap-x-6">
     <div class = "grid justify-items-center">
       <div class="w-full">
         <%= f.label :name, 'Nombre:' %><br>
@@ -116,50 +116,32 @@
   </div>
 
 
-  <div data-component="tab-container" class="bg-white mt-0.5 shadow-lg shadow-black">
-    <div class="text-sm
-                font-medium
-                text-center
-                text-gray-500
-                border-b
-                border-gray-200
-                dark:text-gray-400
-                dark:border-gray-700">
+  <div data-component="tab-container" class="bg-white mt-0.5 shadow rounded">
+    <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200">
       <ul class="flex flex-wrap -mb-px">
         <li class="mr-2">
           <a id = "display-pain-form"
              data-target = "pain-form"
              data-component-type = "tab"
-             class = "inline-block p-4
-                      text-blue-600
-                      border-b-2
-                      border-blue-600
-                      rounded-t-lg
-                      active hover:text-blue-500
-                      hover:border-blue-500">Caracteristicas del dolor</a>
+             class = "inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active hover:text-blue-500 hover:border-blue-500">Caracteristicas del dolor</a>
         </li>
         <li class="mr-2">
           <a data-target ="physical-exploration-form"
              data-component-type = "tab"
              id="display-physic-form"
-             class="inline-block p-4 text-gray-600
-                    border-b-2 border-gray-600
-                    rounded-t-lg active hover:text-blue-500
-                    hover:border-blue-500" aria-current="page">Exploración física</a>
+             class="inline-block p-4 text-gray-600 border-b-2 border-gray-600 rounded-t-lg active hover:text-blue-500 hover:border-blue-500" aria-current="page">Exploración física</a>
         </li>
         <li class="mr-2">
           <a data-target="lab-form"
              data-component-type = "tab"
              id="display-lab-form"
-             class="inline-block p-4 text-gray-600 border-b-2 border-gray-600 rounded-t-lg
-                      active hover:text-blue-500 hover:border-blue-500">Laboratorio/Gabinete</a>
+             class="inline-block p-4 text-gray-600 border-b-2 border-gray-600 rounded-t-lg active hover:text-blue-500 hover:border-blue-500">Laboratorio/Gabinete</a>
         </li>
         <li class="mr-2">
           <a data-target="treatment-form"
              id="display-treatment-form"
              data-component-type = "tab"
-             class="inline-block p-4 text-gray-600 border-b-2 border-gray-600 rounded-t-lg
-                      active hover:text-blue-500 hover:border-blue-500">Tratamientos</a>
+             class="inline-block p-4 text-gray-600 border-b-2 border-gray-600 rounded-t-lg active hover:text-blue-500 hover:border-blue-500">Tratamientos</a>
         </li>
       </ul>
     </div>
@@ -169,10 +151,8 @@
     <%= render 'treatment_form', f: f %>
   </div>
 
-  <div class="mt-4">
-    <%= f.submit submit, class: 'bg-violet-800 hover:bg-violet-900 text-white font-bold
-                                 py-2 px-4 rounded' %>
-    <%= link_to 'Regresar', :back, class: 'bg-white hover:bg-gray-200 text-black font-bold
-                                           py-2 px-4 rounded' %>
+  <div class="mt-4 flex">
+    <%= f.submit submit, class: 'bg-violet-600 hover:bg-violet-900 shadow-sm text-white font-bold py-2 px-4 rounded block mr-2' %>
+    <%= link_to 'Regresar', root_path, class: 'bg-white hover:bg-gray-200 text-black font-bold py-2 px-4 rounded' %>
   </div>
 <% end %>
